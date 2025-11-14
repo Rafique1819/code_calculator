@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Rafique</title>
+</head>
+
+<body>
+   <h1>Rafique Ahamad</h1>
+   <input id="num1" type="number" placeholder="Enter first number"> <br>
+   <input id="num2" type="number" placeholder="Enter second number"> <br>
+   <select name="" id="operation">
+      <option value="Add">Add</option>
+      <option value="Sub">Subtract</option>
+      <option value="Multiply">Multiply</option>
+      <option value="Divide">Divide</option>
+   </select>
+   <button id="btn">Submit</button>
+   <script>
+
+
+
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", (value) => {
+         solution();
+      });
+      function solution() {
+         let operation = document.getElementById("operation").value;
+         let n1 = Number(document.getElementById("num1").value);
+         let n2 = Number(document.getElementById("num2").value);
+         let result;
+         switch (operation) {
+            case "Add":
+               result = n1 + n2;
+               break;
+            case "Sub":
+               result = n1 - n2;
+               break;
+            case "Multiply":
+               result = n1 * n2;
+               break;
+            case "Divide":
+               result = n1 / n2;
+               break;
+            default: result = "Invalid value"
+         }
+         console.log(result);
+
+      }
+
+
+
+
+   </script>
+</body>
+
+</html>
